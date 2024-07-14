@@ -15,10 +15,27 @@ React学習用のリポジトリです。
 
 
 
-## Reactの構造
+## Reactの基本構造
 - `public/index.html`が読み込まれる。
 - `src/index.tsx`が読み込まれる。
 - `src/App.tsx`が読み込まれる。
+
+
+
+## Reactコンポーネントの基本ルール
+- `jsx(tsx)`：JSやTSの中でHTML/CSSを記述できる。
+- `returnは()で囲む`：returnが複数行に渡る場合は必ず()で囲む。
+- `returnされるHTMLは一つの要素で囲まれている必要がある`：returnされる最上位のHTML要素は複数存在できない。
+- `Fragment`：Fragmentは実際には画面に描画されない。
+- `interfaceを定義できる`：interfaceを定義し派生オブジェクトを作ることができる。継承したオブジェクトは、interfaceで定義された内容を実装していなければならない。
+
+
+
+## コンポーネントの記法
+- `className`：htmlのクラスを指定
+- `style`：styleの中身はオブジェクトで渡す必要がある。`style={{ color: "blue" }}`など。
+- `オブジェクトのプロパティはキャメルケースで記述`：-が利用できない為、次の様に記述する。例）`font-size → fontSize`
+- `イベント処理もキャメルケースで命名しオブジェクトを渡す`：例）`<button onClick={clickButton}>`
 
 
 

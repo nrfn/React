@@ -7,7 +7,8 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>React学習用</p>
+        <p style={style}>React学習用</p>
+        <button onClick={clickButton}>クリックイベント</button>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -19,4 +20,20 @@ export default function App() {
       </header>
     </div>
   );
+};
+
+interface Style {
+  color: string;
+  fontSize: string;
+  fontWeight: number;
+}
+
+const style: Style = {
+  color: "#61dafb",
+  fontSize: "30px",
+  fontWeight: 900
+};
+
+const clickButton = (): void => {
+  alert("ボタンが押されました。");
 };
