@@ -15,6 +15,13 @@ React学習用のリポジトリです。
 
 
 
+## Reactの構造
+- `public/index.html`が読み込まれる。
+- `src/index.tsx`が読み込まれる。
+- `src/App.tsx`が読み込まれる。
+
+
+
 ### ▼以下デフォルトのREADME
 
 
