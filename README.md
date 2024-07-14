@@ -1,3 +1,18 @@
+# react_learning
+React学習用のリポジトリです。
+
+
+
+## Reactの作成
+- 前提`Node.js`がインストールされていること。
+- `npx create-react-app プロジェクト名`：※注意プロジェクト名に大文字英を含めることはできない。
+
+
+
+## ▼以下デフォルトのREADME
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
