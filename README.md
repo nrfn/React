@@ -9,7 +9,13 @@ React学習用のリポジトリです。
 
 
 
-## ▼以下デフォルトのREADME
+## Reactの起動
+- `npm start`：起動
+- `control + C`：終了
+
+
+
+### ▼以下デフォルトのREADME
 
 
 
