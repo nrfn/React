@@ -1,18 +1,26 @@
-import React from 'react';
-import '../styles/button.css';
+interface Props {
+  color: string; 
+  size: string;
+  isHollow: boolean;
+  onClickButton: () => void;
+  children: string;
+}
 
-const Button: React.FC = () => {
+const Button: React.FC<Props> = (props) => {
+  let className = "";
+  className += props.color;
+  className += props.isHollow ? 'Hollow' : '';
+  className += ' ';
+  className += props.size;
+
   return (
     <button
-      className="blueberry M"
-      onClick={onClickButton}
+      className={className}
+      onClick={props.onClickButton}
     >
-      React学習用
+      {props.children}
     </button>
   );
 };
-export default Button;
 
-const onClickButton = (): void => {
-  alert('React学習中');
-};
+export default Button;

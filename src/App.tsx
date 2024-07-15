@@ -1,41 +1,28 @@
 import React from 'react';
-import Button from './components/Button';
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
 
-const App : React.FC = () => {
+const App: React.FC = () => {
+  const buttonFirstText: string = "ボタン１"; // 追記
+
+  const onClickButtonFirst = (): void => {
+    // alert('ボタン２をクリックしました！'); 削除
+    alert(buttonFirstText + 'をクリックしました！'); // 追記
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Button/>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={style}
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Reactコース</h1>
+      <Button
+        color="blueberry"
+        size="S"
+        isHollow={false}
+        onClickButton={onClickButtonFirst}
+      >
+        {buttonFirstText}
+      </Button>
     </div>
   );
 };
+
 export default App;
-
-interface Style {
-  color: string;
-  fontSize: string;
-  fontWeight: string;
-  textDecoration: string;
-  textShadow: string;
-}
-
-const style: Style = {
-  color: "#61dafb",
-  fontSize: "30px",
-  fontWeight: "900",
-  textDecoration: "unset",
-  textShadow: "1px 1px 2px"
-};

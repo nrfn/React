@@ -80,6 +80,39 @@ PAGES（ページ）は、最終的にユーザーに対して表示する画面
 
 
 
+# Props
+コンポーネンと間のデータの受け渡し。
+
+- Propsを渡す側の記述
+```
+  <Button
+    text="ボタン１"
+    color="blueberry"
+    size="S"
+    isHollow={false}
+    onClickButton={onClickButtonFirst}
+  />
+```
+
+- Propsを受け取る側の記述
+```
+const Button: React.FC<Props> = (props) => {
+  let className = "";
+  className += props.color;
+  className += props.isHollow ? 'Hollow' : '';
+  className += ' ';
+  className += props.size;
+}
+```
+
+
+
+# children
+- コンポーネントの開始タグ、閉じタグの間に記述したデータのこと。
+- `{props.children}`で展開できる。
+
+
+
 ### ▼以下デフォルトのREADME
 
 
