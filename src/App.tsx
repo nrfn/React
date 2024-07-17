@@ -3,42 +3,22 @@ import './App.css';
 import Button from './components/Button';
 
 const App: React.FC = () => {
+  const buttonFirstText: string = "ボタン１";
   const onClickButtonFirst = (): void => {
-    alert('ボタン１をクリックしました！');
-  };
-
-  const onClickButtonSecond = (): void => {
-    alert('ボタン２をクリックしました！');
-  };
-
-  const onClickButtonThird = (): void => {
-    alert('ボタン３をクリックしました！');
+    alert(buttonFirstText + 'をクリックしました！');
   };
 
   return (
     <div className="App">
       <h1>Reactコース</h1>
       <Button
-        text="ボタン１"
         color="blueberry"
         size="S"
         isHollow={false}
         onClickButton={onClickButtonFirst}
-      />
-      <Button
-        text="ボタン２"
-        color="grape"
-        size="M"
-        isHollow={true}
-        onClickButton={onClickButtonSecond}
-      />
-      <Button
-        text="ボタン3"
-        color="apple"
-        size="L"
-        isHollow={false}
-        onClickButton={onClickButtonThird}
-      />
+      >
+      {buttonFirstText}
+      </ Button>
     </div>
   );
 };
