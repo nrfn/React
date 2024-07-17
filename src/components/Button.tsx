@@ -1,9 +1,12 @@
+import React from 'react';
+import '../styles/button.css';
+
 interface Props {
-  color: string; 
+  text: string;
+  color: string;
   size: string;
   isHollow: boolean;
   onClickButton: () => void;
-  children: string;
 }
 
 const Button: React.FC<Props> = (props) => {
@@ -18,7 +21,7 @@ const Button: React.FC<Props> = (props) => {
       className={className}
       onClick={props.onClickButton}
     >
-      {props.children}
+      {props.text}
     </button>
   );
 };
