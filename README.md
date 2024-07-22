@@ -80,7 +80,7 @@ PAGES（ページ）は、最終的にユーザーに対して表示する画面
 
 
 
-# Props
+## Props
 コンポーネンと間のデータの受け渡し。
 
 - Propsを渡す側の記述
@@ -107,13 +107,38 @@ const Button: React.FC<Props> = (props) => {
 
 
 
-# children
+## children
 - コンポーネントの開始タグ、閉じタグの間に記述したデータのこと。
 - `{props.children}`で展開できる。
 
 
 
-### ▼以下デフォルトのREADME
+## Hooks
+- `useState`\
+コンポーネントの状態を管理する。
+```
+useStateのインポート
+import { useState } from 'react';
+
+state変数と更新用関数の定義
+const [ state変数, 更新用関数 ] = useState(初期値);
+```
+
+- `useEffect`
+コンポーネントが読み込まれたり、stateが更新された際に実行される副作用関数。\
+第一引数に関数を、第二引数にはuseEffectのトリガーになる変数等を記述。\
+第二引数が空の場合、コンポーネントが呼び出された初回のみ実行される。
+```
+useEffectのインポート
+import { useEffect } from 'react';
+
+useEffectの定義
+useEffect(() => {
+  処理
+}, [state変数]);
+```
+
+###### ▼以下デフォルトのREADME
 
 
 
